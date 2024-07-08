@@ -20,13 +20,6 @@ Note: Please make sure dockers in installed on your system.
 `docker run docker run -it --rm subsequence-image "1 3 5 6" 
 
 
-## Documentation
-#### Swagger
-
-The following endpoint displays Swagger:
-1. `http://localhost:5000/swagger/index.html`
-
-
 ## Testing
 Navigate to solution file folder and run the following command  
 `dotnet test`
