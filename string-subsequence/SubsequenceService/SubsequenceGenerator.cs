@@ -5,9 +5,7 @@ namespace SubsequenceService
     {
         public int FindLongestIncreasingSubsequence(string numbers)
         {
-            var lisOfNumber = numbers.Split(' ');
-            
-            if(lisOfNumber.Length == 0 )
+            if(string.IsNullOrWhiteSpace(numbers))
                 return 0;
 
             return 1;
