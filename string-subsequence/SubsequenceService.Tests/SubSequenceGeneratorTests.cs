@@ -32,5 +32,13 @@ public class SubSequenceGeneratorTests
         Assert.Equal(expectedResult, longIncreasingSubsequence);
     }
 
+    [Theory]
+    [InlineData("6 1 5 9 2", "1 5 9")]
+    public void FindLongestIncreasingSubsequence_WhenInputStringHasMultipleNnumber_ShouldReturnLongestIncreasingSubsequence(string numbers, string expectedResult)
+    {
+        var longIncreasingSubsequence = _generator.FindLongestIncreasingSubsequence(numbers);
+
+        Assert.Equal(expectedResult, longIncreasingSubsequence);
+    }
 
 }
