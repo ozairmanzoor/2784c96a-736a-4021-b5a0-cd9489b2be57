@@ -33,9 +33,6 @@
           run: dotnet build --no-restore
         
         - name: Test
-          run: dotnet test --no-build --verbosity normal
-          
-        - name: Test
           run: dotnet test --no-build --verbosity normal --configuration Release --logger "trx;LogFileName=test-results.trx" || true
           
         - name: Test Report
