@@ -3,8 +3,6 @@ namespace SubsequenceService
 {
     public class SubsequenceGenerator : ISubsequenceGenerator
     {
-        static int max_ref;
-
         public string FindLongestIncreasingSubsequence(string input)
         {
             if(string.IsNullOrWhiteSpace(input))
@@ -29,15 +27,9 @@ namespace SubsequenceService
                         previous = next;
                     }
                 }
-                sequenceStore.Add($"{i} {string.Join(" ",subsequence)}");
+                sequenceStore.Add($"{numbers[i]} {string.Join(" ",subsequence)}");
             }
-
-            //var memebers = new List<int>();
-            //foreach( var subsequence in sequenceStore )
-            //{
-            //    memebers.Add(subsequence.Split(' ').Length);
-
-            //}
+           
             var memebers = sequenceStore.Select(seq => seq.Split(' ').Length).ToList();
             var index = memebers.IndexOf(memebers.Max());
             return sequenceStore[index];
