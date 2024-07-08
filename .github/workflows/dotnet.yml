@@ -42,7 +42,6 @@
             name: DotNet Tests            # Name of the check run which will be created
             path: "**/test-results.trx"    # Path to test results
             reporter: dotnet-trx        # Format of test results
-            fail-on-error: true
 
         - name: Log into registry
           uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d # v3.0.0
