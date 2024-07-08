@@ -3,13 +3,17 @@ namespace SubsequenceService
 {
     public class SubsequenceGenerator : ISubsequenceGenerator
     {
-        public int FindLongestIncreasingSubsequence(string numbers)
+        public string FindLongestIncreasingSubsequence(string numbers)
         {
             if(string.IsNullOrWhiteSpace(numbers))
-                return 0;
+                return string.Empty;
 
-            return 1;
-          
+            var result = numbers.Split(' ');
+            if(result.Length == 1 ) 
+                return result[0];
+
+
+            return numbers;
         }
     }
 }

@@ -2,6 +2,6 @@
 {
     public interface ISubsequenceGenerator
     {
-        public int FindLongestIncreasingSubsequence(string numbers);
+        public string FindLongestIncreasingSubsequence(string numbers);
     }
 }

@@ -12,23 +12,25 @@ public class SubSequenceGeneratorTests
     /// When input string is empty
     /// </summary>
     [Fact]
-    public void FindLongestIncreasingSubsequence_WhenInputStringIsEmpty_ShouldReturn0()
+    public void FindLongestIncreasingSubsequence_WhenInputStringIsEmpty_ShouldReturnEmptyString()
     {
         var longIncreasingSubsequence = _generator.FindLongestIncreasingSubsequence(string.Empty);
 
-        Assert.Equal(0, longIncreasingSubsequence);
+        Assert.Empty(longIncreasingSubsequence);
     }
 
     /// <summary>
     /// When input string had one number
     /// </summary>
     [Theory]
-    [InlineData("1", 1)]
-    [InlineData("2000", 1)]
-    public void FindLongestIncreasingSubsequence_WhenInputStringHasOneNumber_ShouldReturn1(string numbers, int expectedResult)
+    [InlineData("1", "1")]
+    [InlineData("2000", "2000")]
+    public void FindLongestIncreasingSubsequence_WhenInputStringHasOneNumber_ShouldReturn1(string numbers, string expectedResult)
     {
         var longIncreasingSubsequence = _generator.FindLongestIncreasingSubsequence(numbers);
 
         Assert.Equal(expectedResult, longIncreasingSubsequence);
     }
+
+
 }
